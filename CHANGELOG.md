@@ -5,10 +5,32 @@ All notable changes to this list will be documented in this file. Format follows
 ## [Unreleased]
 
 ### Planned for v1.1.0
-- Expand CLI Extensions coverage from ~70 curated → ~150 by pulling deeper from the [public registry](https://geminicli.com/extensions.json).
+- Expand CLI Extensions coverage from ~120 curated → ~200 by pulling deeper from the [public registry](https://geminicli.com/extensions.json).
 - Add per-extension star-count badges (mirroring how the registry ranks).
 - Track Connected Apps surface renaming history in a dedicated mini-timeline.
 - Add `awesome-lint` to CI once the repo is ≥30 days old (lint blocks submissions on `git-repo-age` until 2026-06-09).
+
+---
+
+## [1.0.1] — 2026-05-10
+
+### Fixed
+- Corrected 4 broken GitHub URLs caught by liveness check:
+  - `gemini-cli-extensions/bigquery-conversational` → `bigquery-conversational-analytics` (correct repo name).
+  - `gemini-cli-extensions/cloud-observability` → `gemini-cli-extensions/observability` (renamed).
+  - `gemini-cli-extensions/cloud-assist` → `GoogleCloudPlatform/gemini-cloud-assist-mcp` (lives in the GoogleCloudPlatform org).
+  - `googlemaps/platform-mcp` → `googlemaps/platform-ai` (correct repo name — Maps Platform Code Assist toolkit).
+
+### Added
+- ~50 additional official Google CLI extensions surfaced by completeness audit against the `gemini-cli-extensions` GitHub org (66 total repos in the org as of May 2026).
+- New **Cloud and Infrastructure** entries: Cloud Run (CLI extension wrapper), GKE MCP Remote, Compute Engine, Cloud Storage, Cloud Resource Manager, Cloud Composer, Pub/Sub, Managed Kafka, Dataproc, Datastream, Database Migration Service.
+- New **Databases and Data** entries: MCP Toolbox CLI variant, BigQuery Data Transfer Service, BigQuery Migration Service, generic PostgreSQL/MySQL/SQL Server, Spanner, AlloyDB Omni, Firestore (separate from Firestore Native), Memorystore for Redis, Memorystore for Valkey, Knowledge Catalog, Looker, Looker Conversational Analytics.
+- New **Development and DevOps** entries: Angular, Web Accessibility, Android Management API, Firebase (Gemini CLI version), Workspace Dev Assist, Workspace Developer MCP, Vertex AI, Vertex AI Search, Customer Experience Agent Studio, Data Agent Kit Starter Pack, Developer Knowledge, Pay and Wallet Developer.
+- Split **Observability and Security** into two sections: **Observability and SRE** (now includes Cloud Logging, Cloud Monitoring, SRE Extension, AlloyDB Observability, Cloud SQL *-Observability variants) and **Security** (added Google SecOps CLI extension separately from `google/mcp-security`).
+
+### Changed
+- TOC restructured to reflect Observability/Security split.
+- Header counts: Connectors 70+ → 120+, Categories 14 → 15.
 
 ---
 
@@ -30,5 +52,6 @@ All notable changes to this list will be documented in this file. Format follows
 - Connected Apps list assembled from Google's official [help center](https://support.google.com/gemini/answer/13695044) and release notes through May 2026.
 - CLI Extensions list assembled from the public registry (~987 entries), filtered to: all Google-owned extensions across `google`, `gemini-cli-extensions`, `googlecloudplatform`, `googleworkspace`, `firebase`, `googleapis` orgs + the highest-signal third-party entries by topic.
 
-[Unreleased]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/rdmgator12/Gemini-Awesome-List-/releases/tag/v1.0.0

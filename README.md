@@ -6,7 +6,7 @@
 
 > A curated directory of every extension and connected app available across Gemini's two integration surfaces — the consumer Gemini app (`gemini.google.com`) and the developer-side **Gemini CLI** — organized by category with descriptions and use cases.
 
-**Last updated:** May 10, 2026 · **Connected Apps:** 26 · **CLI Extensions (curated):** 70+ · **Categories:** 14 · **Version:** [1.0.0](CHANGELOG.md)
+**Last updated:** May 10, 2026 · **Connected Apps:** 26 · **CLI Extensions (curated):** 120+ · **Categories:** 15 · **Version:** [1.0.1](CHANGELOG.md)
 
 ---
 
@@ -52,7 +52,8 @@ For more information, see the [Gemini CLI extensions reference](https://github.c
 - [Cloud and Infrastructure](#cloud-and-infrastructure)
 - [Databases and Data](#databases-and-data)
 - [Development and DevOps](#development-and-devops)
-- [Observability and Security](#observability-and-security)
+- [Observability and SRE](#observability-and-sre)
+- [Security](#security)
 - [Productivity and Communication (CLI)](#productivity-and-communication-cli)
 - [AI and Agents](#ai-and-agents)
 - [Web and Browser](#web-and-browser)
@@ -139,9 +140,19 @@ Open developer ecosystem. Browse the full ~987-entry public registry at **[gemin
 
 - 🅖 📡 [gcloud](https://github.com/gemini-cli-extensions/gcloud) - Google Cloud CLI surface. *Use case: Querying GCP project state, managing resources, scripted deploys via natural language.*
 - 🅖 📡 [Cloud Run](https://github.com/GoogleCloudPlatform/cloud-run-mcp) - Serverless container deploys on Cloud Run. *Use case: Deploying services, querying revisions, debugging traffic splits.*
+- 🅖 📡 [Cloud Run (Gemini CLI extension)](https://github.com/gemini-cli-extensions/cloud-run) - Cloud Run extension wrapper. *Use case: Same Cloud Run scope, packaged as a Gemini CLI extension.*
 - 🅖 📡 [GKE MCP](https://github.com/GoogleCloudPlatform/gke-mcp) - Google Kubernetes Engine management. *Use case: Cluster operations, pod debugging, deployment automation on GKE.*
-- 🅖 📡 [Google Cloud Observability](https://github.com/gemini-cli-extensions/cloud-observability) - Logs, metrics, and traces on GCP. *Use case: Incident triage grounded in Cloud Logging + Cloud Monitoring data.*
-- 🅖 📡 [GeminiCloudAssist](https://github.com/gemini-cli-extensions/cloud-assist) - Cloud operations assistant. *Use case: Routine GCP ops, cost queries, resource hygiene.*
+- 🅖 📡 [GKE MCP Remote](https://github.com/gemini-cli-extensions/gke-mcp-remote) - Remote-mode GKE MCP variant. *Use case: GKE ops without local kubeconfig — works against a remote MCP endpoint.*
+- 🅖 📡 [Compute Engine](https://github.com/gemini-cli-extensions/compute-engine) - GCE virtual machines. *Use case: VM lifecycle (start/stop/resize), instance group ops, image and disk management.*
+- 🅖 📡 [Cloud Storage](https://github.com/gemini-cli-extensions/cloud-storage) - GCS object storage. *Use case: Bucket ops, object inspection, ACL/IAM checks.*
+- 🅖 📡 [Cloud Resource Manager](https://github.com/gemini-cli-extensions/cloud-resource-manager) - Project, folder, and org hierarchy management. *Use case: Cross-project queries, IAM hierarchy inspection, project lifecycle ops.*
+- 🅖 📡 [Cloud Composer](https://github.com/gemini-cli-extensions/cloud-composer) - Managed Apache Airflow on GCP. *Use case: DAG inspection, task triage, environment management.*
+- 🅖 📡 [Pub/Sub](https://github.com/gemini-cli-extensions/pubsub) - Google Cloud Pub/Sub messaging. *Use case: Topic/subscription admin, message replay, dead-letter inspection.*
+- 🅖 📡 [Managed Kafka](https://github.com/gemini-cli-extensions/managed-kafka) - Google's managed Kafka service. *Use case: Cluster admin, topic ops, consumer-group debugging.*
+- 🅖 📡 [Dataproc](https://github.com/gemini-cli-extensions/dataproc) - Managed Spark/Hadoop on GCP. *Use case: Cluster lifecycle, job submission, batch analytics.*
+- 🅖 📡 [Datastream](https://github.com/gemini-cli-extensions/datastream) - Managed CDC and replication. *Use case: Stream config, replication monitoring, source/destination admin.*
+- 🅖 📡 [Database Migration Service](https://github.com/gemini-cli-extensions/database-migration-service) - GCP Database Migration Service. *Use case: Migration job authoring, status checks, cutover planning.*
+- 🅖 📡 [Gemini Cloud Assist](https://github.com/GoogleCloudPlatform/gemini-cloud-assist-mcp) - Investigation-driven GCP operations assistant. *Use case: Create investigations, add observations, run analysis on GCP resources via natural language.*
 - 🛠️ 📡 [Azure Skills](https://github.com/microsoft/azure-skills) - Microsoft Azure operations. *Use case: Azure resource management from the CLI.*
 - 🛠️ 📡 [CloudBase AI Toolkit](https://github.com/TencentCloudBase/CloudBase-MCP) - Tencent CloudBase. *Use case: Tencent Cloud development workflows.*
 - 🛠️ 📡 [Alibaba Cloud ACK MCP](https://github.com/aliyun/alibabacloud-ack-mcp-server) - Alibaba Container Service for Kubernetes. *Use case: Alibaba Cloud k8s operations.*
@@ -151,16 +162,29 @@ Open developer ecosystem. Browse the full ~987-entry public registry at **[gemin
 ## Databases and Data
 
 - 🅖 📡 [MCP Toolbox for Databases](https://github.com/googleapis/mcp-toolbox) - Unified DB connector covering 30+ data sources. *Use case: Querying heterogeneous databases through one toolbox.*
+- 🅖 📡 [MCP Toolbox (CLI extension)](https://github.com/gemini-cli-extensions/mcp-toolbox) - DB tooling abstraction layer for Gemini CLI. *Use case: Multi-DB MCP convenience wrapper.*
 - 🅖 📡 [BigQuery Data Analytics](https://github.com/gemini-cli-extensions/bigquery-data-analytics) - SQL analytics on BigQuery. *Use case: Ad-hoc analytics, query authoring grounded in schema.*
-- 🅖 📡 [BigQuery Conversational](https://github.com/gemini-cli-extensions/bigquery-conversational) - Natural-language → SQL on BigQuery. *Use case: Non-SQL users querying BigQuery; rapid analyst loops.*
+- 🅖 📡 [BigQuery Conversational Analytics](https://github.com/gemini-cli-extensions/bigquery-conversational-analytics) - Natural-language → SQL on BigQuery. *Use case: Non-SQL users querying BigQuery; rapid analyst loops.*
+- 🅖 📡 [BigQuery Data Transfer Service](https://github.com/gemini-cli-extensions/bigquery-data-transfer-service) - Scheduled data transfers into BigQuery. *Use case: Configure recurring loads from SaaS sources, monitor transfer runs.*
+- 🅖 📡 [BigQuery Migration Service](https://github.com/gemini-cli-extensions/bigquery-migration-service) - Translate and migrate workloads to BigQuery. *Use case: SQL translation from Teradata/Redshift/Snowflake/etc., migration planning.*
 - 🅖 📡 [Cloud SQL — PostgreSQL](https://github.com/gemini-cli-extensions/cloud-sql-postgresql) - Postgres on Cloud SQL. *Use case: Schema introspection and queries against managed Postgres.*
 - 🅖 📡 [Cloud SQL — MySQL](https://github.com/gemini-cli-extensions/cloud-sql-mysql) - MySQL on Cloud SQL. *Use case: MySQL admin and queries.*
 - 🅖 📡 [Cloud SQL — SQL Server](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver) - SQL Server on Cloud SQL. *Use case: SQL Server admin and queries.*
+- 🅖 📡 [PostgreSQL (generic)](https://github.com/gemini-cli-extensions/postgres) - Generic Postgres connector. *Use case: Any Postgres instance (GCP or otherwise) — schema, queries, role inspection.*
+- 🅖 📡 [MySQL (generic)](https://github.com/gemini-cli-extensions/mysql) - Generic MySQL connector. *Use case: Any MySQL instance — schema, queries, user admin.*
+- 🅖 📡 [SQL Server (generic)](https://github.com/gemini-cli-extensions/sql-server) - Generic SQL Server connector. *Use case: Any SQL Server instance — schema, queries, T-SQL workflows.*
 - 🅖 📡 [Oracle DB](https://github.com/gemini-cli-extensions/oracledb) - Oracle Database connector. *Use case: Oracle DB queries and metadata exploration.*
+- 🅖 📡 [Spanner](https://github.com/gemini-cli-extensions/spanner) - Cloud Spanner globally distributed DB. *Use case: Strongly consistent multi-region queries, schema management.*
 - 🅖 📡 [AlloyDB](https://github.com/gemini-cli-extensions/alloydb) - AlloyDB for Postgres (Google's HTAP managed DB). *Use case: Postgres-compatible HTAP workloads on GCP.*
+- 🅖 📡 [AlloyDB Omni](https://github.com/gemini-cli-extensions/alloydb-omni) - Self-managed AlloyDB Omni. *Use case: AlloyDB workflows on the self-hosted variant.*
 - 🅖 📡 [Firestore Native](https://github.com/gemini-cli-extensions/firestore-native) - Cloud Firestore in native mode. *Use case: NoSQL document operations on Firestore.*
+- 🅖 📡 [Firestore](https://github.com/gemini-cli-extensions/firestore) - Cloud Firestore (Datastore-mode + native). *Use case: Document store operations across both Firestore modes.*
+- 🅖 📡 [Memorystore for Redis](https://github.com/gemini-cli-extensions/memorystore-for-redis) - Managed Redis on GCP. *Use case: Cache and session-store admin on Memorystore.*
+- 🅖 📡 [Memorystore for Valkey](https://github.com/gemini-cli-extensions/memorystore-for-valkey) - Managed Valkey on GCP. *Use case: Open-source Redis-fork managed service ops.*
+- 🅖 📡 [Knowledge Catalog](https://github.com/gemini-cli-extensions/knowledge-catalog) - Data discovery and governance via Knowledge Catalog. *Use case: Data asset search, lineage inspection, governance workflows.*
 - 🅖 📡 [Data Commons](https://github.com/gemini-cli-extensions/datacommons) - Public statistical datasets via Data Commons. *Use case: Demographic, economic, and environmental research from a unified knowledge graph.*
-- 🅖 📡 [Looker — Conversational Analytics](https://github.com/gemini-cli-extensions/looker) - Looker BI integration. *Use case: Querying Looker dashboards and explores in natural language.*
+- 🅖 📡 [Looker](https://github.com/gemini-cli-extensions/looker) - Looker BI integration. *Use case: Querying Looker explores, accessing dashboards, building data workflows.*
+- 🅖 📡 [Looker Conversational Analytics](https://github.com/gemini-cli-extensions/looker-conversational-analytics) - Natural-language analytics on Looker. *Use case: Self-service BI without writing LookML — ask in English, get visualizations.*
 - 🛠️ 📡 [Redis MCP](https://github.com/redis/mcp-redis) - Redis (caching/state). *Use case: Inspecting keys, debugging eviction, cache analytics.*
 - 🛠️ 📡 [MongoDB Agent Skills](https://github.com/mongodb/agent-skills) - MongoDB operations. *Use case: Document queries, schema design, aggregation pipelines.*
 - 🛠️ 📡 [Neo4j MCP](https://github.com/neo4j-contrib/mcp-neo4j) - Neo4j graph database. *Use case: Cypher query authoring, graph traversal exploration.*
@@ -176,11 +200,23 @@ Open developer ecosystem. Browse the full ~987-entry public registry at **[gemin
 - 🅖 📡 [CI/CD](https://github.com/gemini-cli-extensions/cicd) - CI/CD workflow tooling. *Use case: Pipeline authoring and debugging.*
 - 🅖 📡 [Conductor](https://github.com/gemini-cli-extensions/conductor) - Spec → plan → implement workflow. *Use case: Structured implementation flow from a spec doc.*
 - 🅖 📡 [Flutter](https://github.com/gemini-cli-extensions/flutter) - Flutter mobile dev. *Use case: Flutter project scaffolding, widget building, debug.*
-- 🅖 📡 [Firebase](https://github.com/firebase/agent-skills) - Firebase backend services. *Use case: Auth, Firestore, Functions, Hosting workflows.*
+- 🅖 📡 [Angular](https://github.com/gemini-cli-extensions/angular) - Angular framework dev. *Use case: Angular project scaffolding, component generation, build/test workflows.*
+- 🅖 📡 [Web Accessibility](https://github.com/gemini-cli-extensions/web-accessibility) - Automate finding and fixing web accessibility issues. *Use case: WCAG compliance scanning, ARIA fixes, accessibility-first review.*
+- 🅖 📡 [Android Management API](https://github.com/gemini-cli-extensions/android-management-api) - Android device fleet management. *Use case: Enterprise Android admin, policy authoring, device enrollment.*
+- 🅖 📡 [Firebase (Gemini CLI)](https://github.com/gemini-cli-extensions/firebase) - Firebase backend services CLI extension. *Use case: Firebase project ops in the CLI ecosystem.*
+- 🅖 📡 [Firebase Agent Skills](https://github.com/firebase/agent-skills) - Firebase agent skills bundle. *Use case: Auth, Firestore, Functions, Hosting workflows via skills.*
 - 🅖 📡 [Genkit](https://github.com/gemini-cli-extensions/genkit) - Google's GenAI app dev framework. *Use case: Building production GenAI apps with structured chains.*
 - 🅖 📡 [Google Workspace CLI](https://github.com/googleworkspace/cli) - Workspace developer tooling. *Use case: Add-on development, Apps Script and CardKit workflows.*
 - 🅖 📡 [Google Workspace Developer Tools](https://github.com/googleworkspace/developer-tools) - Broader Workspace dev surface. *Use case: Workspace add-on QA and deploy.*
+- 🅖 📡 [Workspace Dev Assist](https://github.com/googleworkspace/dev-assist) - Workspace developer MCP server. *Use case: Inline help while building Workspace add-ons and apps.*
+- 🅖 📡 [Workspace Developer MCP](https://github.com/googleworkspace/developer-mcp) - MCP server for Workspace developers. *Use case: Workspace API documentation, code samples, API key management.*
 - 🅖 📡 [Stitch](https://github.com/gemini-cli-extensions/stitch) - UI generation extension. *Use case: Generating UI components from prompts.*
+- 🅖 📡 [Vertex AI](https://github.com/gemini-cli-extensions/vertex) - Manage prompts and resources in Vertex AI. *Use case: Prompt management, model deployment, MLOps on Vertex.*
+- 🅖 📡 [Vertex AI Search](https://github.com/gemini-cli-extensions/vertex-ai-search) - Vertex AI Search retrieval. *Use case: RAG pipelines grounded in Vertex AI Search indexes.*
+- 🅖 📡 [Customer Experience Agent Studio](https://github.com/gemini-cli-extensions/customer-experience-agent-studio) - Build CCAI / customer-experience agents. *Use case: Conversational agent authoring for customer support flows.*
+- 🅖 📡 [Data Agent Kit Starter Pack](https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack) - Starter pack for data agents. *Use case: Reference scaffolding for building agentic data workflows.*
+- 🅖 📡 [Developer Knowledge](https://github.com/gemini-cli-extensions/developer-knowledge) - Ask questions about Google APIs and services. *Use case: Inline API doc lookup, code-sample retrieval grounded in current Google docs.*
+- 🅖 📡 [Pay and Wallet Developer](https://github.com/gemini-cli-extensions/pay-and-wallet-developer) - Google Pay and Wallet developer tooling. *Use case: Pay button integration, Wallet pass authoring, payment-flow scaffolding.*
 - 🛠️ 📡 [Stripe AI](https://github.com/stripe/ai) - Stripe payments. *Use case: Payment flows, subscription management, dispute handling.*
 - 🛠️ 📡 [Atlassian Rovo MCP](https://github.com/atlassian/atlassian-mcp-server) - Jira + Confluence (Atlassian's official MCP). *Use case: Issue triage, Confluence search, sprint planning from CLI.*
 - 🛠️ 📡 [SonarQube MCP](https://github.com/SonarSource/sonarqube-mcp-server) - Code quality and static analysis. *Use case: Quality-gate inspection, technical-debt tracking.*
@@ -189,18 +225,30 @@ Open developer ecosystem. Browse the full ~987-entry public registry at **[gemin
 - 🛠️ 📡 [Monday MCP](https://github.com/mondaycom/mcp) - Monday.com project management. *Use case: Board ops, item updates, automation.*
 - 🛠️ 📡 [Telnyx](https://github.com/team-telnyx/ai) - Telnyx voice/SMS/WebRTC. *Use case: Communications API workflows.*
 
-## Observability and Security
+## Observability and SRE
 
-- 🅖 📡 [Gemini CLI Security](https://github.com/gemini-cli-extensions/security) - Code security review. *Use case: Pre-merge security scan, SCA-style review of dependencies.*
-- 🅖 📡 [Google SecOps](https://github.com/google/mcp-security) - Google's security operations toolkit. *Use case: Detection, threat hunting, SOC workflows.*
-- 🛠️ 📡 [CrowdStrike Falcon MCP](https://github.com/CrowdStrike/falcon-mcp) - CrowdStrike Falcon EDR. *Use case: Endpoint detection queries, incident triage.*
+- 🅖 📡 [Cloud Logging](https://github.com/gemini-cli-extensions/cloud-logging) - Google Cloud Logging. *Use case: Log search, filter authoring, log-based metric setup.*
+- 🅖 📡 [Cloud Monitoring](https://github.com/gemini-cli-extensions/cloud-monitoring) - Google Cloud Monitoring. *Use case: Metric exploration, alert policy authoring, dashboard inspection.*
+- 🅖 📡 [SRE Extension](https://github.com/gemini-cli-extensions/sre) - Site Reliability Engineering toolkit for GCP investigations. *Use case: Incident triage, postmortem support, reliability workflows.*
+- 🅖 📡 [AlloyDB Observability](https://github.com/gemini-cli-extensions/alloydb-observability) - AlloyDB monitoring metrics. *Use case: AlloyDB performance investigation via natural-language metric queries.*
+- 🅖 📡 [Cloud SQL PostgreSQL Observability](https://github.com/gemini-cli-extensions/cloud-sql-postgresql-observability) - Cloud SQL Postgres monitoring. *Use case: Postgres performance investigation, query-level metrics.*
+- 🅖 📡 [Cloud SQL MySQL Observability](https://github.com/gemini-cli-extensions/cloud-sql-mysql-observability) - Cloud SQL MySQL monitoring. *Use case: MySQL performance investigation, query metrics.*
+- 🅖 📡 [Cloud SQL SQL Server Observability](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability) - Cloud SQL SQL Server monitoring. *Use case: SQL Server performance investigation, system metrics.*
 - 🛠️ 📡 [Dynatrace MCP](https://github.com/dynatrace-oss/dynatrace-mcp) - Dynatrace observability. *Use case: APM and infrastructure monitoring queries.*
 - 🛠️ 📡 [Grafana MCP](https://github.com/grafana/mcp-grafana) - Grafana dashboards and alerting. *Use case: Dashboard authoring, alert tuning, log correlation.*
+
+## Security
+
+- 🅖 📡 [Gemini CLI Security](https://github.com/gemini-cli-extensions/security) - Code security review. *Use case: Pre-merge security scan, SCA-style review of dependencies, vulnerability flagging in PRs.*
+- 🅖 📡 [Google SecOps (CLI extension)](https://github.com/gemini-cli-extensions/google-secops) - Google SecOps OneMCP for the CLI. *Use case: Detection authoring, threat hunting, SOC workflows.*
+- 🅖 📡 [MCP Security](https://github.com/google/mcp-security) - Google's broader security operations toolkit. *Use case: Cross-tool security ops via MCP.*
+- 🛠️ 📡 [CrowdStrike Falcon MCP](https://github.com/CrowdStrike/falcon-mcp) - CrowdStrike Falcon EDR. *Use case: Endpoint detection queries, incident triage.*
 
 ## Productivity and Communication (CLI)
 
 - 🅖 📡 [Google Workspace](https://github.com/gemini-cli-extensions/workspace) - Gmail/Drive/Docs/Sheets/Calendar/Slides/Tasks. *Use case: Same scope as the consumer Connected App, exposed via MCP for CLI workflows.*
-- 🅖 📡 [Google Maps Platform](https://github.com/googlemaps/platform-mcp) - Maps Platform developer surface. *Use case: Routes API, places search, geocoding from the CLI.*
+- 🅖 📡 [Google Maps Platform Code Assist](https://github.com/googlemaps/platform-ai) - Maps Platform developer surface grounded in official docs and code samples. *Use case: Routes API, Places search, geocoding workflows — get code samples grounded in current docs without context-switching.*
+- 🅖 📡 [Maps Grounding Lite](https://github.com/gemini-cli-extensions/maps-grounding-lite) - Lightweight Maps grounding for prompts. *Use case: Inline location grounding for queries that need maps context.*
 - 🛠️ 📡 [Raindrop MCP](https://github.com/adeze/raindrop-mcp) - Raindrop.io bookmarks. *Use case: Bookmark search and organization.*
 
 ## AI and Agents
