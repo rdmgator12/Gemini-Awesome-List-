@@ -6,9 +6,9 @@
 
 > A curated directory of every extension and connected app available across Gemini's two integration surfaces — the consumer Gemini app (`gemini.google.com`) and the developer-side **Gemini CLI** — organized by category with descriptions and use cases.
 
-**Last updated:** May 10, 2026 · **Connected Apps:** 26 · **CLI Extensions (curated):** 120+ · **Categories:** 15 · **Version:** 1.0.1
+**Last updated:** May 15, 2026 · **Connected Apps:** 26 · **CLI Extensions (curated):** 130+ · **Categories:** 15 · **Version:** 1.0.2
 
-Gemini has two distinct extension surfaces, and they don't share an SDK. **Consumer Connected Apps** are Google-curated integrations available in the Gemini chat at [gemini.google.com](https://gemini.google.com/apps). Originally called *Extensions* (2024), then *Apps* (early 2025), now **Connected Apps** (Oct 2025). Closed list — no third-party developer SDK; entries are partnership/invitation-driven. As of Oct 2025, public-info services like Maps, Flights, Hotels, YouTube, and Search are auto-invoked from natural prompts and no longer require the `@AppName` mention pattern. **Gemini CLI Extensions** are an open developer ecosystem for [Gemini CLI](https://github.com/google-gemini/gemini-cli), Google's terminal CLI for Gemini. Each extension is a directory with a `gemini-extension.json` manifest that can ship MCP servers, context files, hooks, skills, and custom slash commands. The authoritative public registry lives at [geminicli.com/extensions.json](https://geminicli.com/extensions.json) with ~987 entries ranked by GitHub stars (May 2026).
+Gemini has two distinct extension surfaces, and they don't share an SDK. **Consumer Connected Apps** are Google-curated integrations available in the Gemini chat at [gemini.google.com](https://gemini.google.com/apps). Originally called *Extensions* (2024), then *Apps* (early 2025), now **Connected Apps** (Oct 2025). Closed list — no third-party developer SDK; entries are partnership/invitation-driven. As of Oct 2025, public-info services like Maps, Flights, Hotels, YouTube, and Search are auto-invoked from natural prompts and no longer require the `@AppName` mention pattern. **Gemini CLI Extensions** are an open developer ecosystem for [Gemini CLI](https://github.com/google-gemini/gemini-cli), Google's terminal CLI for Gemini. Each extension is a directory with a `gemini-extension.json` manifest that can ship MCP servers, context files, hooks, skills, and custom slash commands. The authoritative public registry lives at [geminicli.com/extensions.json](https://geminicli.com/extensions.json) with ~783 entries ranked by GitHub stars (May 2026).
 
 This list curates both surfaces. The Consumer side is enumerated exhaustively. The CLI side is too large to mirror entry-for-entry — we curate **all official Google extensions** plus the highest-signal third-party ones; the registry remains the canonical full source.
 
@@ -108,7 +108,7 @@ These don't require toggling and don't appear in the Connected Apps list — the
 
 ## Gemini CLI Extensions
 
-Open developer ecosystem. Browse the full ~987-entry public registry at [geminicli.com/extensions](https://geminicli.com/extensions/). Below is a curated subset.
+Open developer ecosystem. Browse the full ~783-entry public registry at [geminicli.com/extensions](https://geminicli.com/extensions/). Below is a curated subset.
 
 ## Cloud and Infrastructure
 
@@ -159,6 +159,9 @@ Open developer ecosystem. Browse the full ~987-entry public registry at [geminic
 - 🅖 📡 [Data Commons](https://github.com/gemini-cli-extensions/datacommons) - Public statistical datasets via Data Commons. *Use case: Demographic, economic, and environmental research from a unified knowledge graph.*
 - 🅖 📡 [Looker](https://github.com/gemini-cli-extensions/looker) - BI integration for Google's enterprise analytics platform. *Use case: Querying Looker explores, accessing dashboards, building data workflows.*
 - 🅖 📡 [Looker Conversational Analytics](https://github.com/gemini-cli-extensions/looker-conversational-analytics) - Natural-language analytics on Looker. *Use case: Self-service BI without writing LookML — ask in English, get visualizations.*
+- 🅖 📡 [Bigtable](https://github.com/GoogleCloudPlatform/cloud-bigtable-ecosystem) - Google Cloud Bigtable wide-column NoSQL. *Use case: Bigtable instance and table admin, schema design, SQL or client-library queries.*
+- 🅖 📡 [BigQuery Remote MCP](https://github.com/GoogleCloudPlatform/bigquery-remote-mcp) - BigQuery via remote MCP endpoint. *Use case: Querying BigQuery from natural-language prompts without a local CLI install.*
+- 🅖 📡 [Cloud DB Context Enrichment](https://github.com/GoogleCloudPlatform/db-context-enrichment) - Enriches DB schema and context for downstream Gemini queries. *Use case: Build a richer schema and context layer before handing a DB question to Gemini.*
 - 🛠️ 📡 [Redis MCP](https://github.com/redis/mcp-redis) - Redis (caching/state). *Use case: Inspecting keys, debugging eviction, cache analytics.*
 - 🛠️ 📡 [MongoDB Agent Skills](https://github.com/mongodb/agent-skills) - MongoDB operations. *Use case: Document queries, schema design, aggregation pipelines.*
 - 🛠️ 📡 [Neo4j MCP](https://github.com/neo4j-contrib/mcp-neo4j) - Neo4j graph database. *Use case: Cypher query authoring, graph traversal exploration.*
@@ -191,6 +194,8 @@ Open developer ecosystem. Browse the full ~987-entry public registry at [geminic
 - 🅖 📡 [Data Agent Kit Starter Pack](https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack) - Starter pack for data agents. *Use case: Reference scaffolding for building agentic data workflows.*
 - 🅖 📡 [Developer Knowledge](https://github.com/gemini-cli-extensions/developer-knowledge) - Ask questions about Google APIs and services. *Use case: Inline API doc lookup, code-sample retrieval grounded in current docs.*
 - 🅖 📡 [Pay and Wallet Developer](https://github.com/gemini-cli-extensions/pay-and-wallet-developer) - Google Pay and Wallet developer tooling. *Use case: Pay button integration, Wallet pass authoring, payment-flow scaffolding.*
+- 🛠️ 📡 [GitHub MCP Server](https://github.com/github/github-mcp-server) - GitHub's official MCP server (30K stars). *Use case: Repository ops, PR review, issue triage, and GitHub Actions interaction from the CLI.*
+- 🛠️ 🧠 [Web Quality Skills](https://github.com/addyosmani/web-quality-skills) - Web performance, accessibility, and quality skills from Addy Osmani. *Use case: Pre-merge web-vitals checks, accessibility audits, perf-budget enforcement.*
 - 🛠️ 📡 [Stripe AI](https://github.com/stripe/ai) - Stripe payments. *Use case: Payment flows, subscription management, dispute handling.*
 - 🛠️ 📡 [Atlassian Rovo MCP](https://github.com/atlassian/atlassian-mcp-server) - Jira + Confluence (Atlassian's official MCP). *Use case: Issue triage, search, sprint planning from CLI.*
 - 🛠️ 📡 [SonarQube MCP](https://github.com/SonarSource/sonarqube-mcp-server) - Code quality and static analysis. *Use case: Quality-gate inspection, technical-debt tracking.*
@@ -208,6 +213,7 @@ Open developer ecosystem. Browse the full ~987-entry public registry at [geminic
 - 🅖 📡 [Cloud SQL PostgreSQL Observability](https://github.com/gemini-cli-extensions/cloud-sql-postgresql-observability) - Cloud SQL PostgreSQL monitoring. *Use case: PostgreSQL performance investigation, query-level metrics.*
 - 🅖 📡 [Cloud SQL MySQL Observability](https://github.com/gemini-cli-extensions/cloud-sql-mysql-observability) - Cloud SQL MySQL monitoring. *Use case: MySQL performance investigation, query metrics.*
 - 🅖 📡 [Cloud SQL SQL Server Observability](https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability) - Cloud SQL SQL Server monitoring. *Use case: SQL Server performance investigation, system metrics.*
+- 🅖 📡 [Observability (GCP)](https://github.com/gemini-cli-extensions/observability) - Cross-resource GCP observability via MCP. *Use case: Pull metrics, logs, and incidents across GCP services into one Gemini session for cross-stack triage.*
 - 🛠️ 📡 [Dynatrace MCP](https://github.com/dynatrace-oss/dynatrace-mcp) - Dynatrace observability. *Use case: APM and infrastructure monitoring queries.*
 - 🛠️ 📡 [Grafana MCP](https://github.com/grafana/mcp-grafana) - Grafana dashboards and alerting. *Use case: Dashboard authoring, alert tuning, log correlation.*
 
@@ -216,6 +222,7 @@ Open developer ecosystem. Browse the full ~987-entry public registry at [geminic
 - 🅖 📡 [Gemini CLI Security](https://github.com/gemini-cli-extensions/security) - Code security review. *Use case: Pre-merge security scan, SCA-style review of dependencies, vulnerability flagging in PRs.*
 - 🅖 📡 [Google SecOps (CLI extension)](https://github.com/gemini-cli-extensions/google-secops) - Google SecOps OneMCP for the CLI. *Use case: Detection authoring, threat hunting, SOC workflows.*
 - 🅖 📡 [MCP Security](https://github.com/google/mcp-security) - Google's broader security operations toolkit. *Use case: Cross-tool security ops via MCP.*
+- 🅖 📡 [GCP Hardening Agent](https://github.com/GoogleCloudPlatform/gcp-hardening-toolkit) - GCP hardening and blueprint generation. *Use case: Audit a GCP project against hardening blueprints and generate the remediation plan as Terraform.*
 - 🛠️ 📡 [CrowdStrike Falcon MCP](https://github.com/CrowdStrike/falcon-mcp) - Falcon EDR. *Use case: Endpoint detection queries, incident triage.*
 
 ## Productivity and Communication (CLI)
@@ -231,6 +238,7 @@ Open developer ecosystem. Browse the full ~987-entry public registry at [geminic
 - 🅖 📡 [Ralph](https://github.com/gemini-cli-extensions/ralph) - Agent-loop pattern implementation (named for the methodology, not our Ralph). *Use case: Recursive self-improving execution loops.*
 - 🅖 [Nano Banana](https://github.com/gemini-cli-extensions/nanobanana) - Image generation/editing. *Use case: Inline image creation and editing during CLI sessions.*
 - 🛠️ 🧠 [Skill Porter](https://github.com/jduncan-rva/skill-porter) - Convert Claude Code skills ↔ Gemini CLI extensions. *Use case: Cross-platform reuse of Anthropic skills inside Gemini CLI and vice versa.*
+- 🛠️ 🧠 [claude-code-workflows](https://github.com/wshobson/agents) - Curated agentic workflow library (35K stars) reusable as Gemini CLI skills. *Use case: Drop in battle-tested Claude-Code agent patterns inside Gemini CLI sessions.*
 - 🛠️ 🧠 [Superpowers](https://github.com/obra/superpowers) - Skills library (TDD, debug, refactor patterns). *Use case: Plug-and-play engineering discipline patterns.*
 - 🛠️ [Caveman](https://github.com/JuliusBrussee/caveman) - Token compression. *Use case: Long-context optimization, cache-friendly prompt shaping.*
 - 🛠️ 📡 [Hugging Face MCP](https://github.com/huggingface/hf-mcp-server) - Hugging Face Hub access. *Use case: Model discovery, dataset retrieval, Spaces interaction.*
@@ -244,6 +252,7 @@ Open developer ecosystem. Browse the full ~987-entry public registry at [geminic
 
 - 🅖 📡 [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) - Browser debugging via DevTools protocol. *Use case: DOM inspection, network log capture, performance traces during development.*
 - 🛠️ 📡 [Browserbase MCP](https://github.com/browserbase/mcp-server-browserbase) - Headless browser automation. *Use case: Web automation, data extraction, form filling at scale.*
+- 🛠️ 🧠 [Apify Agent Skills](https://github.com/apify/agent-skills) - Apify web-scraping and Actor toolkit (2K stars). *Use case: Run Apify Actors for site scraping, structured extraction, and large-scale crawl jobs.*
 - 🛠️ 📡 [Desktop Commander](https://github.com/wonderwhy-er/DesktopCommanderMCP) - Local shell + filesystem access. *Use case: Mixed CLI + filesystem workflows on the user's machine.*
 - 🛠️ 📡 [Exa MCP Server](https://github.com/exa-labs/exa-mcp-server) - Exa neural search. *Use case: High-recall web search, research workflows beyond Google Search.*
 - 🛠️ 📡 [Context7](https://github.com/upstash/context7) - Live library documentation lookup. *Use case: Pulling up-to-date API docs into a coding session.*
@@ -253,4 +262,4 @@ Open developer ecosystem. Browse the full ~987-entry public registry at [geminic
 
 Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for the submission flow, the legend conventions, and the entry style guide. By contributing you agree to the [Code of Conduct](code-of-conduct.md).
 
-The CLI side is large (~987 entries in the official registry). We curate the highest-signal extensions rather than mirroring the full registry. Strong third-party submissions welcome — include the GitHub repo URL, the extension's `gemini-extension.json` manifest path, and one specific use case.
+The CLI side is large (~783 entries in the official registry as of May 2026). We curate the highest-signal extensions rather than mirroring the full registry. Strong third-party submissions welcome — include the GitHub repo URL, the extension's `gemini-extension.json` manifest path, and one specific use case.

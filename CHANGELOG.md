@@ -5,10 +5,28 @@ All notable changes to this list will be documented in this file. Format follows
 ## [Unreleased]
 
 ### Planned for v1.1.0
-- Expand CLI Extensions coverage from ~120 curated → ~200 by pulling deeper from the [public registry](https://geminicli.com/extensions.json).
+- Expand CLI Extensions coverage from ~130 curated → ~200 by pulling deeper from the [public registry](https://geminicli.com/extensions.json).
 - Add per-extension star-count badges (mirroring how the registry ranks).
 - Track Connected Apps surface renaming history in a dedicated mini-timeline.
-- Add `awesome-lint` to CI once the repo is ≥30 days old (lint blocks submissions on `git-repo-age` until 2026-06-09).
+
+---
+
+## [1.0.2] — 2026-05-15
+
+### Added
+- **Databases and Data:** Bigtable (GoogleCloudPlatform/cloud-bigtable-ecosystem), BigQuery Remote MCP, Cloud DB Context Enrichment — all Google-owned, surfaced by re-diff against the live registry.
+- **Observability and SRE:** Observability (GCP) — Google's cross-resource observability MCP at `gemini-cli-extensions/observability`.
+- **Security:** GCP Hardening Agent (GoogleCloudPlatform/gcp-hardening-toolkit) — hardening blueprints and Terraform remediation.
+- **Development and DevOps:** GitHub MCP Server (github/github-mcp-server, 30K stars) — GitHub's official MCP, and Web Quality Skills (addyosmani/web-quality-skills) — web-vitals and accessibility skill bundle.
+- **AI and Agents:** claude-code-workflows (wshobson/agents, 35K stars) — cross-platform agent workflows reusable in Gemini CLI.
+- **Web and Browser:** Apify Agent Skills (apify/agent-skills, 2K stars) — web-scraping Actor toolkit.
+
+### Changed
+- Header counts: CLI Extensions (curated) 120+ → 130+, version 1.0.1 → 1.0.2.
+- Live registry total corrected from ~987 entries to ~783 entries (as of May 2026). The prior figure was sourced from an earlier registry snapshot; the registry has since pruned inactive entries.
+
+### Notes
+- Connected Apps surface: no net-new entries verified this week. Google Chat (added as a Workspace data source on March 25, 2026) is already covered by the Workspace umbrella entry. NotebookLM and Notebooks integration (April 8, 2026) is a Gemini-internal feature, not a separately toggleable Connected App.
 
 ---
 
@@ -52,6 +70,7 @@ All notable changes to this list will be documented in this file. Format follows
 - Connected Apps list assembled from Google's official [help center](https://support.google.com/gemini/answer/13695044) and release notes through May 2026.
 - CLI Extensions list assembled from the public registry (~987 entries), filtered to: all Google-owned extensions across `google`, `gemini-cli-extensions`, `googlecloudplatform`, `googleworkspace`, `firebase`, `googleapis` orgs + the highest-signal third-party entries by topic.
 
-[Unreleased]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/rdmgator12/Gemini-Awesome-List-/releases/tag/v1.0.0
