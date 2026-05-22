@@ -6,9 +6,9 @@
 
 > A curated directory of every extension and connected app available across Gemini's two integration surfaces — the consumer Gemini app (`gemini.google.com`) and the developer-side **Gemini CLI** — organized by category with descriptions and use cases.
 
-**Last updated:** May 15, 2026 · **Connected Apps:** 26 · **CLI Extensions (curated):** 130+ · **Categories:** 15 · **Version:** 1.0.2
+**Last updated:** May 22, 2026 · **Connected Apps:** 30 · **CLI Extensions (curated):** 134+ · **Categories:** 16 · **Version:** 1.0.3
 
-Gemini has two distinct extension surfaces, and they don't share an SDK. **Consumer Connected Apps** are Google-curated integrations available in the Gemini chat at [gemini.google.com](https://gemini.google.com/apps). Originally called *Extensions* (2024), then *Apps* (early 2025), now **Connected Apps** (Oct 2025). Closed list — no third-party developer SDK; entries are partnership/invitation-driven. As of Oct 2025, public-info services like Maps, Flights, Hotels, YouTube, and Search are auto-invoked from natural prompts and no longer require the `@AppName` mention pattern. **Gemini CLI Extensions** are an open developer ecosystem for [Gemini CLI](https://github.com/google-gemini/gemini-cli), Google's terminal CLI for Gemini. Each extension is a directory with a `gemini-extension.json` manifest that can ship MCP servers, context files, hooks, skills, and custom slash commands. The authoritative public registry lives at [geminicli.com/extensions.json](https://geminicli.com/extensions.json) with ~783 entries ranked by GitHub stars (May 2026).
+Gemini has two distinct extension surfaces, and they don't share an SDK. **Consumer Connected Apps** are Google-curated integrations available in the Gemini chat at [gemini.google.com](https://gemini.google.com/apps). Originally called *Extensions* (2024), then *Apps* (early 2025), now **Connected Apps** (Oct 2025). Closed list — no third-party developer SDK; entries are partnership/invitation-driven. As of Oct 2025, public-info services like Maps, Flights, Hotels, YouTube, and Search are auto-invoked from natural prompts and no longer require the `@AppName` mention pattern. **Gemini CLI Extensions** are an open developer ecosystem for [Gemini CLI](https://github.com/google-gemini/gemini-cli), Google's terminal CLI for Gemini. Each extension is a directory with a `gemini-extension.json` manifest that can ship MCP servers, context files, hooks, skills, and custom slash commands. The authoritative public registry lives at [geminicli.com/extensions.json](https://geminicli.com/extensions.json) with ~891 entries ranked by GitHub stars (May 2026).
 
 This list curates both surfaces. The Consumer side is enumerated exhaustively. The CLI side is too large to mirror entry-for-entry — we curate **all official Google extensions** plus the highest-signal third-party ones; the registry remains the canonical full source.
 
@@ -29,6 +29,7 @@ For more information, see the [Gemini CLI extensions reference](https://github.c
 - [Smart Home and Device Control](#smart-home-and-device-control)
 - [Education](#education)
 - [Developer Tools (Consumer)](#developer-tools-consumer)
+- [MCP-Connected Partner Apps](#mcp-connected-partner-apps)
 - [OEM Partner Apps](#oem-partner-apps)
 - [Auto-invoked Public-info Services](#auto-invoked-public-info-services)
 - [Gemini CLI Extensions](#gemini-cli-extensions)
@@ -51,6 +52,7 @@ Toggleable integrations in the Gemini chat. Closed list — no public SDK.
 
 ## Communication
 
+- 🅖 [Contacts](https://contacts.google.com) - Google Contacts management. *Use case: Find, add, edit, and delete contacts via natural language (Gemini Spark, English only at launch).*
 - 🅖 🤖 [Messages](https://messages.google.com) - Default Android SMS client. *Use case: Sending and summarizing text messages from natural-language prompts on Android.*
 - 🅖 🤖 [Phone](https://store.google.com/category/pixel_phones) - Default Android dialer. *Use case: Initiating and managing calls without leaving the assistant.*
 - 🤝 🤖 [WhatsApp](https://www.whatsapp.com) - Send and read messages on Android. *Use case: Conversational message drafting and inbox triage from chat.*
@@ -73,6 +75,14 @@ Toggleable integrations in the Gemini chat. Closed list — no public SDK.
 ## Developer Tools (Consumer)
 
 - 🤝 [GitHub](https://github.com) - Search and act on repositories from chat. *Use case: Repository search, summarizing PR threads, generating commit messages from diffs without leaving the assistant.*
+
+## MCP-Connected Partner Apps
+
+Third-party Connected Apps backed by partner-hosted MCP servers — a new pattern Google opened up in [May 2026](https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/). Architecturally distinct from the earlier closed/invitation-only Connected Apps surface. Initially available via Gemini Spark, rolling out to U.S. Google AI Ultra subscribers as of May 2026.
+
+- 🤝 📡 [Canva](https://www.canva.com) - Design platform (decks, social posts, edits). *Use case: Generate decks, banners, and social assets without leaving the Gemini chat.*
+- 🤝 📡 [Instacart](https://www.instacart.com) - Grocery delivery. *Use case: Build grocery orders and dispatch them to a local delivery slot.*
+- 🤝 📡 [OpenTable](https://www.opentable.com) - Restaurant reservations. *Use case: Search availability and book a table from natural-language prompts.*
 
 ## OEM Partner Apps
 
@@ -202,6 +212,8 @@ Open developer ecosystem. Browse the full ~783-entry public registry at [geminic
 - 🛠️ 📡 [Auth0 MCP](https://github.com/auth0/auth0-mcp-server) - Identity platform. *Use case: Tenant config, user management, application scaffolding.*
 - 🛠️ 📡 [Shopify AI Toolkit](https://github.com/Shopify/Shopify-AI-Toolkit) - Shopify e-commerce. *Use case: Product, order, and storefront operations.*
 - 🛠️ 📡 [Monday MCP](https://github.com/mondaycom/mcp) - Monday.com project management. *Use case: Board ops, item updates, automation.*
+- 🛠️ 📡 🧠 [SocratiCode](https://github.com/giancarloerra/SocratiCode) - Codebase intelligence — hybrid semantic search, polyglot dependency graphs, symbol-level impact analysis, call-flow tracing (2.7K stars). *Use case: Cross-project search, impact analysis, and call-flow tracing across large polyglot codebases.*
+- 🛠️ 🧠 [Go Agent Skills](https://github.com/samber/cc-skills-golang) - Production-ready Go agent skills (1.8K stars). *Use case: TDD, code review, and refactor workflows tuned for Go services.*
 - 🛠️ 📡 [Telnyx](https://github.com/team-telnyx/ai) - Voice/SMS/WebRTC communications platform. *Use case: Communications API workflows.*
 
 ## Observability and SRE
@@ -237,9 +249,11 @@ Open developer ecosystem. Browse the full ~783-entry public registry at [geminic
 - 🅖 📡 [Jules](https://github.com/gemini-cli-extensions/jules) - Async coding agent. *Use case: Background coding tasks delegated from the CLI.*
 - 🅖 📡 [Ralph](https://github.com/gemini-cli-extensions/ralph) - Agent-loop pattern implementation (named for the methodology, not our Ralph). *Use case: Recursive self-improving execution loops.*
 - 🅖 [Nano Banana](https://github.com/gemini-cli-extensions/nanobanana) - Image generation/editing. *Use case: Inline image creation and editing during CLI sessions.*
+- 🅖 [Google Agents CLI](https://github.com/google/agents-cli) - Scaffold, develop, evaluate, and deploy AI agents with Google ADK. *Use case: Agent project scaffolding, evaluation harness, deploy to Vertex AI Agent Builder.*
 - 🛠️ 🧠 [Skill Porter](https://github.com/jduncan-rva/skill-porter) - Convert Claude Code skills ↔ Gemini CLI extensions. *Use case: Cross-platform reuse of Anthropic skills inside Gemini CLI and vice versa.*
 - 🛠️ 🧠 [claude-code-workflows](https://github.com/wshobson/agents) - Curated agentic workflow library (35K stars) reusable as Gemini CLI skills. *Use case: Drop in battle-tested Claude-Code agent patterns inside Gemini CLI sessions.*
 - 🛠️ 🧠 [Superpowers](https://github.com/obra/superpowers) - Skills library (TDD, debug, refactor patterns). *Use case: Plug-and-play engineering discipline patterns.*
+- 🛠️ 🧠 [last30days-skill](https://github.com/mvanhorn/last30days-skill) - Multi-platform topic research across Reddit, X, YouTube, TikTok, Instagram, HN, Polymarket, and the web (26K stars). *Use case: Synthesize a grounded summary of the last 30 days on any topic across social and prediction-market sources.*
 - 🛠️ [Caveman](https://github.com/JuliusBrussee/caveman) - Token compression. *Use case: Long-context optimization, cache-friendly prompt shaping.*
 - 🛠️ 📡 [Hugging Face MCP](https://github.com/huggingface/hf-mcp-server) - Hugging Face Hub access. *Use case: Model discovery, dataset retrieval, Spaces interaction.*
 - 🛠️ 🧠 [Hugging Face Skills](https://github.com/huggingface/skills) - Hugging Face skill bundles. *Use case: Curated workflows around HF models and datasets.*

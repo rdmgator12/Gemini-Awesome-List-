@@ -5,9 +5,29 @@ All notable changes to this list will be documented in this file. Format follows
 ## [Unreleased]
 
 ### Planned for v1.1.0
-- Expand CLI Extensions coverage from ~130 curated → ~200 by pulling deeper from the [public registry](https://geminicli.com/extensions.json).
+- Expand CLI Extensions coverage from ~134 curated → ~200 by pulling deeper from the [public registry](https://geminicli.com/extensions.json).
 - Add per-extension star-count badges (mirroring how the registry ranks).
 - Track Connected Apps surface renaming history in a dedicated mini-timeline.
+
+---
+
+## [1.0.3] — 2026-05-22
+
+### Added
+- **Consumer Connected Apps — Communication:** [Contacts](https://contacts.google.com) (🅖) — Google Contacts management via natural language. Per the [help center](https://support.google.com/gemini/answer/17100956), currently English-only and Gemini Spark-only at launch; works on web + mobile.
+- **Consumer Connected Apps — new MCP-Connected Partner Apps section:** Canva, Instacart, OpenTable — per Google's [May 19, 2026 announcement](https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/), partner-hosted MCP servers can now connect to the Consumer surface. Architecturally distinct from the prior closed/invitation-only Connected Apps pattern. Rolling out via Gemini Spark to U.S. Google AI Ultra subscribers; more partners "integrating now" per the blog.
+- **CLI Extensions — AI and Agents:** Google Agents CLI (`google/agents-cli`, 2.5K stars) — official scaffolding/deploy CLI for Google ADK agents. last30days-skill (`mvanhorn/last30days-skill`, 26K stars) — multi-platform topic research across Reddit, X, YouTube, TikTok, Instagram, HN, Polymarket, and the web.
+- **CLI Extensions — Development and DevOps:** SocratiCode (`giancarloerra/SocratiCode`, 2.7K stars) — codebase intelligence with hybrid semantic search and polyglot dependency graphs. Go Agent Skills (`samber/cc-skills-golang`, 1.8K stars) — production-ready Go agent skills.
+
+### Changed
+- Header counts: Connected Apps 26 → 30, CLI Extensions (curated) 130+ → 134+, Categories 15 → 16, version 1.0.2 → 1.0.3.
+- Live registry total updated from ~783 → ~891 entries (+108 in 7 days — registry is in active growth, not pruning, this week).
+- New top-level section under Consumer Connected Apps: **MCP-Connected Partner Apps**, capturing the new MCP-via-Spark partnership pattern.
+
+### Notes
+- Connected Apps count now 30: +1 Contacts + 3 Spark MCP partners (Canva, Instacart, OpenTable). All four new entries verified against the Connected Apps help center and the May 19, 2026 Gemini blog post.
+- Per the blog, "a full list of more partners are integrating now" — anticipate further additions as Spark expands beyond U.S. Ultra beta.
+- Skipped this cycle: `jnMetaCode/superpowers-zh` (Chinese localization of `obra/superpowers` — parent is already listed, localization adds little for the English-reading audience), `wbh604/UZI-Skill` (CN-only stock-analysis skill, too niche for general coverage).
 
 ---
 
@@ -70,7 +90,8 @@ All notable changes to this list will be documented in this file. Format follows
 - Connected Apps list assembled from Google's official [help center](https://support.google.com/gemini/answer/13695044) and release notes through May 2026.
 - CLI Extensions list assembled from the public registry (~987 entries), filtered to: all Google-owned extensions across `google`, `gemini-cli-extensions`, `googlecloudplatform`, `googleworkspace`, `firebase`, `googleapis` orgs + the highest-signal third-party entries by topic.
 
-[Unreleased]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.3...HEAD
+[1.0.3]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/rdmgator12/Gemini-Awesome-List-/releases/tag/v1.0.0
