@@ -6,7 +6,7 @@
 
 > A curated directory of every extension and connected app available across Gemini's two integration surfaces — the consumer Gemini app (`gemini.google.com`) and the developer-side **Gemini CLI** — organized by category with descriptions and use cases.
 
-**Last updated:** May 22, 2026 · **Connected Apps:** 30 · **CLI Extensions (curated):** 134+ · **Categories:** 16 · **Version:** 1.0.3
+**Last updated:** June 5, 2026 · **Connected Apps:** 30 · **CLI Extensions (curated):** 134+ · **Categories:** 16 · **Version:** 1.0.3
 
 Gemini has two distinct extension surfaces, and they don't share an SDK. **Consumer Connected Apps** are Google-curated integrations available in the Gemini chat at [gemini.google.com](https://gemini.google.com/apps). Originally called *Extensions* (2024), then *Apps* (early 2025), now **Connected Apps** (Oct 2025). Closed list — no third-party developer SDK; entries are partnership/invitation-driven. As of Oct 2025, public-info services like Maps, Flights, Hotels, YouTube, and Search are auto-invoked from natural prompts and no longer require the `@AppName` mention pattern. **Gemini CLI Extensions** are an open developer ecosystem for [Gemini CLI](https://github.com/google-gemini/gemini-cli), Google's terminal CLI for Gemini. Each extension is a directory with a `gemini-extension.json` manifest that can ship MCP servers, context files, hooks, skills, and custom slash commands. The authoritative public registry lives at [geminicli.com/extensions.json](https://geminicli.com/extensions.json) with ~891 entries ranked by GitHub stars (May 2026).
 
