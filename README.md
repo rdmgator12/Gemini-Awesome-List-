@@ -6,9 +6,9 @@
 
 > A curated directory of every extension and connected app available across Gemini's two integration surfaces — the consumer Gemini app (`gemini.google.com`) and the developer-side **Gemini CLI** — organized by category with descriptions and use cases.
 
-**Last updated:** June 5, 2026 · **Connected Apps:** 30 · **CLI Extensions (curated):** 134+ · **Categories:** 16 · **Version:** 1.0.3
+**Last updated:** June 26, 2026 · **Connected Apps:** 32 · **CLI Extensions (curated):** 140+ · **Categories:** 17 · **Version:** 1.1.0
 
-Gemini has two distinct extension surfaces, and they don't share an SDK. **Consumer Connected Apps** are Google-curated integrations available in the Gemini chat at [gemini.google.com](https://gemini.google.com/apps). Originally called *Extensions* (2024), then *Apps* (early 2025), now **Connected Apps** (Oct 2025). Closed list — no third-party developer SDK; entries are partnership/invitation-driven. As of Oct 2025, public-info services like Maps, Flights, Hotels, YouTube, and Search are auto-invoked from natural prompts and no longer require the `@AppName` mention pattern. **Gemini CLI Extensions** are an open developer ecosystem for [Gemini CLI](https://github.com/google-gemini/gemini-cli), Google's terminal CLI for Gemini. Each extension is a directory with a `gemini-extension.json` manifest that can ship MCP servers, context files, hooks, skills, and custom slash commands. The authoritative public registry lives at [geminicli.com/extensions.json](https://geminicli.com/extensions.json) with ~891 entries ranked by GitHub stars (May 2026).
+Gemini has two distinct extension surfaces, and they don't share an SDK. **Consumer Connected Apps** are Google-curated integrations available in the Gemini chat at [gemini.google.com](https://gemini.google.com/apps). Originally called *Extensions* (2024), then *Apps* (early 2025), now **Connected Apps** (Oct 2025). Closed list — no third-party developer SDK; entries are partnership/invitation-driven. As of Oct 2025, public-info services like Maps, Flights, Hotels, YouTube, and Search are auto-invoked from natural prompts and no longer require the `@AppName` mention pattern. **Gemini CLI Extensions** are an open developer ecosystem for [Gemini CLI](https://github.com/google-gemini/gemini-cli), Google's terminal CLI for Gemini. Each extension is a directory with a `gemini-extension.json` manifest that can ship MCP servers, context files, hooks, skills, and custom slash commands. The authoritative public registry lives at [geminicli.com/extensions.json](https://geminicli.com/extensions.json) with ~1,056 entries ranked by GitHub stars (June 2026).
 
 This list curates both surfaces. The Consumer side is enumerated exhaustively. The CLI side is too large to mirror entry-for-entry — we curate **all official Google extensions** plus the highest-signal third-party ones; the registry remains the canonical full source.
 
@@ -28,6 +28,7 @@ For more information, see the [Gemini CLI extensions reference](https://github.c
 - [Media and Entertainment](#media-and-entertainment)
 - [Smart Home and Device Control](#smart-home-and-device-control)
 - [Education](#education)
+- [Business](#business)
 - [Developer Tools (Consumer)](#developer-tools-consumer)
 - [MCP-Connected Partner Apps](#mcp-connected-partner-apps)
 - [OEM Partner Apps](#oem-partner-apps)
@@ -70,7 +71,12 @@ Toggleable integrations in the Gemini chat. Closed list — no public SDK.
 
 ## Education
 
+- 🅖 [Google Classroom](https://classroom.google.com) - Collaborate with your Google Classroom for teaching and study workflows (rolling out June 2026). *Use case: Educators draft differentiated assignments, summarize who's submitted, and post drafts grounded in class context; students 18+ build study plans and test practice via the `@Classroom` mention. Workspace for Education/Business accounts, English at launch.*
 - 🤝 [OpenStax](https://openstax.org) - Free, peer-reviewed open educational resources from Rice University. *Use case: Pulling textbook content for tutoring sessions, citing OpenStax material in study workflows.*
+
+## Business
+
+- 🅖 [Google Business Profile](https://www.google.com/business/) - Connect your Business Profile so Gemini understands your brand and customer data ([announced June 10, 2026](https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses/)). *Use case: Ask "how did my business do this month?" to analyze search impressions and engagement, draft tailored review responses in your brand voice, or update operating hours and seasonal posts. Rolling out globally; pairs with the new Business notebooks feature.*
 
 ## Developer Tools (Consumer)
 
@@ -80,7 +86,7 @@ Toggleable integrations in the Gemini chat. Closed list — no public SDK.
 
 Third-party Connected Apps backed by partner-hosted MCP servers — a new pattern Google opened up in [May 2026](https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/). Architecturally distinct from the earlier closed/invitation-only Connected Apps surface. Initially available via Gemini Spark, rolling out to U.S. Google AI Ultra subscribers as of May 2026.
 
-- 🤝 📡 [Canva](https://www.canva.com) - Design platform (decks, social posts, edits). *Use case: Generate decks, banners, and social assets without leaving the Gemini chat.*
+- 🤝 📡 [Canva](https://www.canva.com) - Design platform (decks, social posts, edits); expanded to Gemini web/desktop in June 2026. *Use case: Generate decks, banners, and social assets without leaving the Gemini chat, now on web and mobile.*
 - 🤝 📡 [Instacart](https://www.instacart.com) - Grocery delivery. *Use case: Build grocery orders and dispatch them to a local delivery slot.*
 - 🤝 📡 [OpenTable](https://www.opentable.com) - Restaurant reservations. *Use case: Search availability and book a table from natural-language prompts.*
 
@@ -118,7 +124,7 @@ These don't require toggling and don't appear in the Connected Apps list — the
 
 ## Gemini CLI Extensions
 
-Open developer ecosystem. Browse the full ~783-entry public registry at [geminicli.com/extensions](https://geminicli.com/extensions/). Below is a curated subset.
+Open developer ecosystem. Browse the full ~1,056-entry public registry at [geminicli.com/extensions](https://geminicli.com/extensions/). Below is a curated subset.
 
 ## Cloud and Infrastructure
 
@@ -128,7 +134,7 @@ Open developer ecosystem. Browse the full ~783-entry public registry at [geminic
 - 🅖 📡 [GKE MCP](https://github.com/GoogleCloudPlatform/gke-mcp) - Google Kubernetes Engine management. *Use case: Cluster operations, pod debugging, deployment automation on GKE.*
 - 🅖 📡 [GKE MCP Remote](https://github.com/gemini-cli-extensions/gke-mcp-remote) - Remote-mode GKE variant. *Use case: GKE ops without local kubeconfig — works against a remote MCP endpoint.*
 - 🅖 📡 [Compute Engine](https://github.com/gemini-cli-extensions/compute-engine) - GCE virtual machines. *Use case: VM lifecycle (start/stop/resize), instance group ops, image and disk management.*
-- 🅖 📡 [Cloud Storage](https://github.com/gemini-cli-extensions/cloud-storage) - GCS object storage. *Use case: Bucket ops, object inspection, ACL/IAM checks.*
+- 🅖 🧠 [Cloud Storage](https://github.com/gemini-cli-extensions/google-cloud-storage) - GCS object storage (repo renamed to `google-cloud-storage`, now ships as a skills bundle). *Use case: Bucket ops, object inspection, ACL/IAM checks.*
 - 🅖 📡 [Cloud Resource Manager](https://github.com/gemini-cli-extensions/cloud-resource-manager) - Project, folder, and org hierarchy management. *Use case: Cross-project queries, IAM hierarchy inspection, project lifecycle ops.*
 - 🅖 📡 [Cloud Composer](https://github.com/gemini-cli-extensions/cloud-composer) - Managed Apache Airflow on GCP. *Use case: DAG inspection, task triage, environment management.*
 - 🅖 📡 [Pub/Sub](https://github.com/gemini-cli-extensions/pubsub) - Google Cloud Pub/Sub messaging. *Use case: Topic/subscription admin, message replay, dead-letter inspection.*
@@ -235,7 +241,9 @@ Open developer ecosystem. Browse the full ~783-entry public registry at [geminic
 - 🅖 📡 [Google SecOps (CLI extension)](https://github.com/gemini-cli-extensions/google-secops) - Google SecOps OneMCP for the CLI. *Use case: Detection authoring, threat hunting, SOC workflows.*
 - 🅖 📡 [MCP Security](https://github.com/google/mcp-security) - Google's broader security operations toolkit. *Use case: Cross-tool security ops via MCP.*
 - 🅖 📡 [GCP Hardening Agent](https://github.com/GoogleCloudPlatform/gcp-hardening-toolkit) - GCP hardening and blueprint generation. *Use case: Audit a GCP project against hardening blueprints and generate the remediation plan as Terraform.*
+- 🅖 📡 [Chrome Enterprise Premium MCP](https://github.com/google/chrome-enterprise-premium-mcp) - Reference MCP server for Chrome Enterprise Premium security management. *Use case: Bring AI agents to browser-security administration — query and act on Chrome Enterprise Premium policies and posture.*
 - 🛠️ 📡 [CrowdStrike Falcon MCP](https://github.com/CrowdStrike/falcon-mcp) - Falcon EDR. *Use case: Endpoint detection queries, incident triage.*
+- 🛠️ 🧠 [cnspec Agent Skills](https://github.com/mondoohq/cnspec) - Cloud-native security scanner from Mondoo, exposed as MQL-development and policy-navigation skills. *Use case: Author MQL policies and navigate security-and-compliance checks from build to runtime.*
 
 ## Productivity and Communication (CLI)
 
@@ -254,6 +262,9 @@ Open developer ecosystem. Browse the full ~783-entry public registry at [geminic
 - 🛠️ 🧠 [claude-code-workflows](https://github.com/wshobson/agents) - Curated agentic workflow library (35K stars) reusable as Gemini CLI skills. *Use case: Drop in battle-tested Claude-Code agent patterns inside Gemini CLI sessions.*
 - 🛠️ 🧠 [Superpowers](https://github.com/obra/superpowers) - Skills library (TDD, debug, refactor patterns). *Use case: Plug-and-play engineering discipline patterns.*
 - 🛠️ 🧠 [last30days-skill](https://github.com/mvanhorn/last30days-skill) - Multi-platform topic research across Reddit, X, YouTube, TikTok, Instagram, HN, Polymarket, and the web (26K stars). *Use case: Synthesize a grounded summary of the last 30 days on any topic across social and prediction-market sources.*
+- 🛠️ 📡 🧠 [gemini-kit](https://github.com/nth5693/gemini-kit) - 19 AI agents + 44 commands purpose-built for Gemini CLI (auto planning, testing, review, security). *Use case: Drop in a full software-development agent team with one extension install.*
+- 🛠️ 📡 🧠 [Maestro Orchestrate](https://github.com/josstei/maestro-orchestrate) - Multi-agent orchestration platform — 39 specialists, 4-phase orchestration, native parallel subagents, persistent sessions. *Use case: Coordinate parallel specialist subagents across a long-running task from inside Gemini CLI.*
+- 🛠️ 📡 [Aware (open-aware)](https://github.com/qodo-ai/open-aware) - Deep code-research agent from Qodo that acts as an agentic principal engineer over complex codebases. *Use case: Answer cross-repo "how does this work / what breaks if I change it" questions grounded in the full codebase and its knowledge.*
 - 🛠️ [Caveman](https://github.com/JuliusBrussee/caveman) - Token compression. *Use case: Long-context optimization, cache-friendly prompt shaping.*
 - 🛠️ 📡 [Hugging Face MCP](https://github.com/huggingface/hf-mcp-server) - Hugging Face Hub access. *Use case: Model discovery, dataset retrieval, Spaces interaction.*
 - 🛠️ 🧠 [Hugging Face Skills](https://github.com/huggingface/skills) - Hugging Face skill bundles. *Use case: Curated workflows around HF models and datasets.*
@@ -265,6 +276,7 @@ Open developer ecosystem. Browse the full ~783-entry public registry at [geminic
 ## Web and Browser
 
 - 🅖 📡 [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) - Browser debugging via DevTools protocol. *Use case: DOM inspection, network log capture, performance traces during development.*
+- 🅖 🧠 [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance) - Keeps your coding agent current on web best practices, from the Chrome team (1.4K stars). *Use case: Ground front-end work in up-to-date platform guidance instead of stale training-data patterns.*
 - 🛠️ 📡 [Browserbase MCP](https://github.com/browserbase/mcp-server-browserbase) - Headless browser automation. *Use case: Web automation, data extraction, form filling at scale.*
 - 🛠️ 🧠 [Apify Agent Skills](https://github.com/apify/agent-skills) - Apify web-scraping and Actor toolkit (2K stars). *Use case: Run Apify Actors for site scraping, structured extraction, and large-scale crawl jobs.*
 - 🛠️ 📡 [Desktop Commander](https://github.com/wonderwhy-er/DesktopCommanderMCP) - Local shell + filesystem access. *Use case: Mixed CLI + filesystem workflows on the user's machine.*
@@ -276,4 +288,4 @@ Open developer ecosystem. Browse the full ~783-entry public registry at [geminic
 
 Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for the submission flow, the legend conventions, and the entry style guide. By contributing you agree to the [Code of Conduct](code-of-conduct.md).
 
-The CLI side is large (~783 entries in the official registry as of May 2026). We curate the highest-signal extensions rather than mirroring the full registry. Strong third-party submissions welcome — include the GitHub repo URL, the extension's `gemini-extension.json` manifest path, and one specific use case.
+The CLI side is large (~1,056 entries in the official registry as of June 2026). We curate the highest-signal extensions rather than mirroring the full registry. Strong third-party submissions welcome — include the GitHub repo URL, the extension's `gemini-extension.json` manifest path, and one specific use case.

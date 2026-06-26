@@ -4,10 +4,34 @@ All notable changes to this list will be documented in this file. Format follows
 
 ## [Unreleased]
 
-### Planned for v1.1.0
-- Expand CLI Extensions coverage from ~134 curated → ~200 by pulling deeper from the [public registry](https://geminicli.com/extensions.json).
+### Planned for v1.2.0
+- Expand CLI Extensions coverage from ~140 curated → ~200 by pulling deeper from the [public registry](https://geminicli.com/extensions.json).
 - Add per-extension star-count badges (mirroring how the registry ranks).
 - Track Connected Apps surface renaming history in a dedicated mini-timeline.
+
+---
+
+## [1.1.0] — 2026-06-26
+
+### Added
+- **Consumer Connected Apps — new Business section:** [Google Business Profile](https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses/) (🅖) — connect a Business Profile so Gemini understands brand and customer data; analyze search/engagement performance, draft brand-voice review responses, update hours/posts. Announced June 10, 2026 ("Google for Brazil"); rolling out globally. The companion *Business notebooks* feature is a NotebookLM-style surface, not a separately toggleable Connected App — skipped per the NotebookLM precedent.
+- **Consumer Connected Apps — Education:** [Google Classroom](https://classroom.google.com) (🅖) — `@Classroom` mention pattern; educators draft differentiated assignments and summarize submissions, students 18+ build study plans. Workspace for Education/Business accounts, English at launch; rollout completed ~June 18, 2026.
+- **CLI Extensions — Security:** Chrome Enterprise Premium MCP (`google/chrome-enterprise-premium-mcp`, 🅖 📡) — official reference MCP for browser-security management (updated June 25, 2026). cnspec Agent Skills (`mondoohq/cnspec`, 🛠️ 🧠) — cloud-native security scanner exposed as MQL/policy skills.
+- **CLI Extensions — Web and Browser:** Modern Web Guidance (`GoogleChrome/modern-web-guidance`, 🅖 🧠, 1.4K stars) — Chrome-team skill keeping coding agents current on web best practices.
+- **CLI Extensions — AI and Agents:** gemini-kit (`nth5693/gemini-kit`, 🛠️ 📡 🧠) — 19 agents + 44 commands purpose-built for Gemini CLI. Maestro Orchestrate (`josstei/maestro-orchestrate`, 🛠️ 📡 🧠) — 39-specialist multi-agent orchestration with parallel subagents. Aware (`qodo-ai/open-aware`, 🛠️ 📡) — Qodo's deep code-research agent.
+
+### Fixed
+- **Cloud Storage** extension: repo renamed `gemini-cli-extensions/cloud-storage` → `gemini-cli-extensions/google-cloud-storage` (old URL still 301-redirects). It no longer ships an MCP server — re-tagged 📡 → 🧠 (skills bundle), per the live registry as of June 20, 2026.
+- Registry total reconciled across the README: prose said ~891, body said ~783 — both corrected to ~1,056 (live `extensions.json` count, June 2026).
+
+### Changed
+- Header counts: Connected Apps 30 → 32, CLI Extensions (curated) 134+ → 140+, Categories 16 → 17 (new **Business** section), version 1.0.3 → 1.1.0.
+- New top-level Consumer section: **Business**.
+- Live registry total: ~891 (May) → ~1,056 (June) — +165 in ~5 weeks; growth is dominated by portable cross-agent *skills* entries.
+
+### Notes
+- Verified against Google's June 10 business-features blog post, the Workspace Classroom-in-Gemini rollout notes, the Connected Apps help center, and the live `geminicli.com/extensions.json` (1,056 entries).
+- Skipped this cycle: the high-star registry churn was mostly portable cross-agent skill libraries (`DietrichGebert/ponytail`, `open-gsd/gsd-core`, `max-sixty/worktrunk`) and CN/locale forks (`jnMetaCode/superpowers-zh`, `wbh604/UZI-Skill`, `Jesseovo/last30days-skill-cn`) — not Gemini-specific enough for curation, consistent with prior cycles. *Business notebooks* (feature, not Connected App) also skipped.
 
 ---
 
@@ -90,7 +114,8 @@ All notable changes to this list will be documented in this file. Format follows
 - Connected Apps list assembled from Google's official [help center](https://support.google.com/gemini/answer/13695044) and release notes through May 2026.
 - CLI Extensions list assembled from the public registry (~987 entries), filtered to: all Google-owned extensions across `google`, `gemini-cli-extensions`, `googlecloudplatform`, `googleworkspace`, `firebase`, `googleapis` orgs + the highest-signal third-party entries by topic.
 
-[Unreleased]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.3...HEAD
+[Unreleased]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.3...v1.1.0
 [1.0.3]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/rdmgator12/Gemini-Awesome-List-/compare/v1.0.0...v1.0.1
