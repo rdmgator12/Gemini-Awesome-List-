@@ -22,6 +22,7 @@ All notable changes to this list will be documented in this file. Format follows
 
 ### Changed
 - Header counts: Connected Apps 32 → 35, Categories 17 → 18 (new **Lifestyle**), version 1.1.0 → 1.2.0.
+- Added the inaugural **Connected App of the Week** block (rotates weekly), matching the sibling-list convention. First pick: Google Play.
 - MCP-Connected Partner Apps intro: Google now supports **custom MCP servers** for Spark users (June 30) — the surface is no longer purely partnership-driven; Instacart/OpenTable graduated from Spark-only to the main help-center list.
 - Live registry total: ~1,056 → 1,058 across all three README mentions (+2 in 6 days — growth has flattened vs prior cycles).
 

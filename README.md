@@ -18,6 +18,13 @@ For more information, see the [Gemini CLI extensions reference](https://github.c
 
 > This is an independent, community-maintained list. Not affiliated with, endorsed by, or sponsored by Google LLC. "Gemini," "Google," and related marks are the property of Google LLC. Each extension is the property of its respective owner.
 
+> [!TIP]
+> ### Connected App of the Week — July 2, 2026
+>
+> **Google Play** · *Lifestyle*
+>
+> Inaugural pick: Google Play (rolled out June 26 after the I/O preview) is the first Connected App that closes the loop from conversation to installed software — describe what you need, get tap-to-install Play cards, and buy in-app items and gift cards without leaving Gemini. It anchors the help center's new "Lifestyle apps" grouping, and alongside the June 30 Spark update (Zillow Rentals, Dropbox, custom MCP servers) it marks the week the Connected Apps surface stopped being a closed partnership shelf. Android-only, 18+, personal accounts. Listed under Lifestyle below.
+
 ---
 
 ## Contents
