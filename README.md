@@ -6,9 +6,9 @@
 
 > A curated directory of every extension and connected app available across Gemini's two integration surfaces — the consumer Gemini app (`gemini.google.com`) and the developer-side **Gemini CLI** — organized by category with descriptions and use cases.
 
-**Last updated:** June 26, 2026 · **Connected Apps:** 32 · **CLI Extensions (curated):** 140+ · **Categories:** 17 · **Version:** 1.1.0
+**Last updated:** July 2, 2026 · **Connected Apps:** 35 · **CLI Extensions (curated):** 140+ · **Categories:** 18 · **Version:** 1.2.0
 
-Gemini has two distinct extension surfaces, and they don't share an SDK. **Consumer Connected Apps** are Google-curated integrations available in the Gemini chat at [gemini.google.com](https://gemini.google.com/apps). Originally called *Extensions* (2024), then *Apps* (early 2025), now **Connected Apps** (Oct 2025). Closed list — no third-party developer SDK; entries are partnership/invitation-driven. As of Oct 2025, public-info services like Maps, Flights, Hotels, YouTube, and Search are auto-invoked from natural prompts and no longer require the `@AppName` mention pattern. **Gemini CLI Extensions** are an open developer ecosystem for [Gemini CLI](https://github.com/google-gemini/gemini-cli), Google's terminal CLI for Gemini. Each extension is a directory with a `gemini-extension.json` manifest that can ship MCP servers, context files, hooks, skills, and custom slash commands. The authoritative public registry lives at [geminicli.com/extensions.json](https://geminicli.com/extensions.json) with ~1,056 entries ranked by GitHub stars (June 2026).
+Gemini has two distinct extension surfaces, and they don't share an SDK. **Consumer Connected Apps** are Google-curated integrations available in the Gemini chat at [gemini.google.com](https://gemini.google.com/apps). Originally called *Extensions* (2024), then *Apps* (early 2025), now **Connected Apps** (Oct 2025). Closed list — no third-party developer SDK; entries are partnership/invitation-driven. As of Oct 2025, public-info services like Maps, Flights, Hotels, YouTube, and Search are auto-invoked from natural prompts and no longer require the `@AppName` mention pattern. **Gemini CLI Extensions** are an open developer ecosystem for [Gemini CLI](https://github.com/google-gemini/gemini-cli), Google's terminal CLI for Gemini. Each extension is a directory with a `gemini-extension.json` manifest that can ship MCP servers, context files, hooks, skills, and custom slash commands. The authoritative public registry lives at [geminicli.com/extensions.json](https://geminicli.com/extensions.json) with ~1,058 entries ranked by GitHub stars (July 2026).
 
 This list curates both surfaces. The Consumer side is enumerated exhaustively. The CLI side is too large to mirror entry-for-entry — we curate **all official Google extensions** plus the highest-signal third-party ones; the registry remains the canonical full source.
 
@@ -29,6 +29,7 @@ For more information, see the [Gemini CLI extensions reference](https://github.c
 - [Smart Home and Device Control](#smart-home-and-device-control)
 - [Education](#education)
 - [Business](#business)
+- [Lifestyle](#lifestyle)
 - [Developer Tools (Consumer)](#developer-tools-consumer)
 - [MCP-Connected Partner Apps](#mcp-connected-partner-apps)
 - [OEM Partner Apps](#oem-partner-apps)
@@ -78,17 +79,25 @@ Toggleable integrations in the Gemini chat. Closed list — no public SDK.
 
 - 🅖 [Google Business Profile](https://www.google.com/business/) - Connect your Business Profile so Gemini understands your brand and customer data ([announced June 10, 2026](https://blog.google/innovation-and-ai/products/gemini-app/gemini-features-for-businesses/)). *Use case: Ask "how did my business do this month?" to analyze search impressions and engagement, draft tailored review responses in your brand voice, or update operating hours and seasonal posts. Rolling out globally; pairs with the new Business notebooks feature.*
 
+## Lifestyle
+
+Mirrors the help center's new "Lifestyle apps" grouping (June 2026). Google also groups Instacart, OpenTable, and Zillow here — those are listed under MCP-Connected Partner Apps below, matching this list's architecture-first taxonomy.
+
+- 🅖 🤖 [Google Play](https://play.google.com) - Find, install, and buy from the Google Play Store ([official help doc](https://support.google.com/gemini/answer/17131257)). *Use case: Conversational app and game discovery, tap-to-install Play cards, and in-app purchase or gift-card buying from chat. Android-only, 18+, personal accounts with Keep Activity on; rolled out June 26, 2026 after the I/O 2026 preview.*
+
 ## Developer Tools (Consumer)
 
 - 🤝 [GitHub](https://github.com) - Search and act on repositories from chat. *Use case: Repository search, summarizing PR threads, generating commit messages from diffs without leaving the assistant.*
 
 ## MCP-Connected Partner Apps
 
-Third-party Connected Apps backed by partner-hosted MCP servers — a new pattern Google opened up in [May 2026](https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/). Architecturally distinct from the earlier closed/invitation-only Connected Apps surface. Initially available via Gemini Spark, rolling out to U.S. Google AI Ultra subscribers as of May 2026.
+Third-party Connected Apps backed by partner-hosted MCP servers — a pattern Google opened up in [May 2026](https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/). Architecturally distinct from the earlier closed/invitation-only Connected Apps surface. Initially Spark-gated, the surface is broadening fast: Instacart and OpenTable have graduated to the main help-center Connected Apps list, and as of [June 30, 2026](https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/) users with Spark access can also connect **custom MCP servers**, which appear as custom apps in Connected Apps settings — no longer purely partnership-driven.
 
 - 🤝 📡 [Canva](https://www.canva.com) - Design platform (decks, social posts, edits); expanded to Gemini web/desktop in June 2026. *Use case: Generate decks, banners, and social assets without leaving the Gemini chat, now on web and mobile.*
+- 🤝 📡 [Dropbox](https://www.dropbox.com) - Cloud file storage and sharing. *Use case: Access and share Dropbox files from Spark tasks. Announced June 30, 2026; rolling out on Spark web/mobile, with the macOS app to follow.*
 - 🤝 📡 [Instacart](https://www.instacart.com) - Grocery delivery. *Use case: Build grocery orders and dispatch them to a local delivery slot.*
 - 🤝 📡 [OpenTable](https://www.opentable.com) - Restaurant reservations. *Use case: Search availability and book a table from natural-language prompts.*
+- 🤝 📡 [Zillow Rentals](https://www.zillow.com/rentals/) - Rental search and tour booking — the first real-estate Connected App. *Use case: Find rental listings, review tour schedules, and book apartment tours without leaving chat. Announced June 30, 2026.*
 
 ## OEM Partner Apps
 
@@ -124,7 +133,7 @@ These don't require toggling and don't appear in the Connected Apps list — the
 
 ## Gemini CLI Extensions
 
-Open developer ecosystem. Browse the full ~1,056-entry public registry at [geminicli.com/extensions](https://geminicli.com/extensions/). Below is a curated subset.
+Open developer ecosystem. Browse the full ~1,058-entry public registry at [geminicli.com/extensions](https://geminicli.com/extensions/). Below is a curated subset.
 
 ## Cloud and Infrastructure
 
@@ -288,4 +297,4 @@ Open developer ecosystem. Browse the full ~1,056-entry public registry at [gemin
 
 Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for the submission flow, the legend conventions, and the entry style guide. By contributing you agree to the [Code of Conduct](code-of-conduct.md).
 
-The CLI side is large (~1,056 entries in the official registry as of June 2026). We curate the highest-signal extensions rather than mirroring the full registry. Strong third-party submissions welcome — include the GitHub repo URL, the extension's `gemini-extension.json` manifest path, and one specific use case.
+The CLI side is large (~1,058 entries in the official registry as of July 2026). We curate the highest-signal extensions rather than mirroring the full registry. Strong third-party submissions welcome — include the GitHub repo URL, the extension's `gemini-extension.json` manifest path, and one specific use case.

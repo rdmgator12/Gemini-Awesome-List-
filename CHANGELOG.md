@@ -4,10 +4,33 @@ All notable changes to this list will be documented in this file. Format follows
 
 ## [Unreleased]
 
-### Planned for v1.2.0
+### Planned for v1.3.0
 - Expand CLI Extensions coverage from ~140 curated → ~200 by pulling deeper from the [public registry](https://geminicli.com/extensions.json).
 - Add per-extension star-count badges (mirroring how the registry ranks).
-- Track Connected Apps surface renaming history in a dedicated mini-timeline.
+- Track Connected Apps surface renaming history in a dedicated mini-timeline — note the help center now nests Connected Apps settings under **Personal Intelligence** (per the June 29, 2026 personalized-image-creation launch), the fourth naming era after Extensions → Apps → Connected Apps.
+- **📡 re-tag audit (PATCH cycle):** the v1.1.0 cloud-storage fix was one instance of a broad pattern — manifest verification shows ~15 Google extensions no longer declare `mcpServers` and now ship `skills/` dirs (dataproc, cloud-sql-* ×3, spanner, alloydb, alloydb-omni, oracledb, firestore-native, knowledge-catalog, looker, bigquery-data-analytics, code-review, conductor, sre, googleworkspace/cli, and others), while `nanobanana` and `clasp` report MCP the README doesn't tag. Dedicated pass needed; conversions predate June 26.
+- Snapshot `extensions.json` at each sweep (repo or scratch archive) so registry deltas can be attributed — the +2 this window could not be identified without a prior snapshot.
+- Curation candidates spotted outside the window (not provably new): `krakenfx/kraken-cli` (vendor-official Kraken trading CLI, 652★), `hyhmrright/brooks-lint` (code review grounded in 12 engineering books, 1.2K★), `davidmosiah/google-health-mcp` (npm-published Google Health API v4, 18★).
+
+---
+
+## [1.2.0] — 2026-07-02
+
+### Added
+- **Consumer Connected Apps — new Lifestyle section:** [Google Play](https://support.google.com/gemini/answer/17131257) (🅖 🤖) — find/install apps and make in-app or gift-card purchases from chat; Android-only, 18+, rolled out June 26, 2026. Mirrors the help center's new "Lifestyle apps" grouping; Instacart/OpenTable/Zillow stay under MCP-Connected Partner Apps per this list's architecture-first taxonomy.
+- **MCP-Connected Partner Apps:** Zillow Rentals (🤝 📡) — rental search + tour booking, the first real-estate Connected App; Dropbox (🤝 📡) — file access/sharing via Spark, still rolling out. Both per Google's [June 30 Spark update](https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/).
+
+### Changed
+- Header counts: Connected Apps 32 → 35, Categories 17 → 18 (new **Lifestyle**), version 1.1.0 → 1.2.0.
+- MCP-Connected Partner Apps intro: Google now supports **custom MCP servers** for Spark users (June 30) — the surface is no longer purely partnership-driven; Instacart/OpenTable graduated from Spark-only to the main help-center list.
+- Live registry total: ~1,056 → 1,058 across all three README mentions (+2 in 6 days — growth has flattened vs prior cycles).
+
+### Notes
+- Spark's June 30 update also shipped a macOS beta (US Ultra, 18+) and Google Tasks/Keep support — both covered by the existing Workspace umbrella entry, no new entries.
+- gemini-cli: v0.49.0 (June 25) shipped a skill-install path-traversal security fix (PR #27767); in-window releases were nightlies only. No new repos in the `gemini-cli-extensions` org since April.
+- Zillow's site hard-blocks programmatic access (curl 403, crawl timeout) — liveness established via Google's own help center listing and Zillow's live press room.
+- Skipped: `epoko77-ai/im-not-ai` (3.5K★ Korean-locale text humanizer) per the existing locale precedent.
+- The v1.2.0 milestone previously reserved in [Unreleased] has been renumbered to v1.3.0; this release consumes 1.2.0 for the weekly sweep per the documented SemVer rule (MINOR for new entries).
 
 ---
 
